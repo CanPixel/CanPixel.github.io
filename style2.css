@@ -1,0 +1,469 @@
+/** Stijl 2 gemaakt door Can Ur **/
+
+:root {
+	--color_back: #222; /*#DDDDDD */
+	--color_one: #444; /*#999999 */
+	--color_two: #666; /*#AAAAAA */
+	--margin_small: 15px;
+	--margin_big: 50px;
+	font-family: Verdana;
+}
+
+::selection {
+	color:#999;
+	background-color:black;
+}
+
+.snippetVid {
+	border-radius:2px;
+	padding:3px;
+	border: solid 4px #666;
+}
+
+.titleCard {
+	color:#CCC;
+	background-color:#666;
+	padding: 10px 20px 20px 20px;
+	margin-bottom:25px;
+	font-weight: 700;
+}
+
+.subjectMenu {
+	background-color: #AAAAAA;
+	margin-top: 8px;
+	padding: 10px 0;
+	width:100%;
+	height: 200px;
+}
+
+ul#schoolMenu li {
+	float: left;
+	font-size: 18px;
+	border: solid 2px white;
+	margin-bottom: 10px;
+	margin-left: 18px;
+	padding: 10px 0;
+	width: 200px;
+	transition: background-color 0.2s ease;
+}
+
+ul#schoolMenu li:hover {
+	background-color: white;
+	animation-name: schoolMove;
+	animation-duration: 0.3s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease;
+}
+
+ul#schoolMenu li:active {
+	background-color:#888;
+	border-color: #888;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#nextKnop {
+	font-size: 18px;
+	border: solid 2px white;
+	padding: 10px 0;
+	width: 70px;
+	margin-top: 55px;
+	background-color: #AAA;
+	transition: background-color 0.2s ease;
+}
+
+#nextKnop:hover {
+	cursor: pointer;
+	background-color: white;
+}
+
+#control {
+	text-align:center;
+	border-spacing: 3px;
+	background-color:#555;
+}
+
+#control tr td:first-child {
+	font-size:18px;
+	color:#ddd;
+}
+
+#control td:nth-child(odd) {
+	background-color:#666;
+	padding:5px;
+	padding-bottom: 18px;
+	font-weight: 500;
+}
+
+#control th {
+	background-color:#bbb;
+}
+
+#control td {
+	border-collapse:collapse;
+	background-color:#888;
+	font-size:14px;
+}
+
+#logboek {
+	border-spacing: 3px;
+	background-color:#909090;
+}
+
+#logboek td:nth-child(odd) {
+	background-color:#EEEEEE;
+	padding:5px;
+}
+
+#logboek th {
+	background-color:#DDDDDD;
+	padding:8px 28px;
+}
+
+#logboek td {
+	border-collapse:collapse;
+	background-color:#DDDDDD;
+}
+
+.link {
+	color:#333;
+	font-size: 20px;
+	transition: color 0.1s ease, font-size 0.1s ease, background-color 0.1s ease;
+}
+
+.link:hover {
+	color:#000;
+	font-size: 22px;
+	background-color:#666;
+	padding:5px;
+}
+
+.link:active {
+	text-decoration: none;
+	font-style: normal;
+	color: #888;
+	background-color:#444;
+	padding:5px;
+}
+
+a {
+	text-decoration: none;
+	font-size:18px;
+	font-weight: 700;
+	color:#010145;
+}
+
+.anchorOffs {
+	display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden;
+}
+
+a:hover{
+	color:#0300B5;
+	font-style: oblique;
+}
+
+a:hover > li {
+	font-style:normal;
+}
+
+ul a {
+	color:black;
+	font-size:16px; 
+}
+
+.social img {
+	filter: blur(0.5px) invert(0);
+}
+
+.social img:hover{
+	filter: blur(0.5px) invert(40%);
+}
+
+h1 {
+	font-size: 55px;
+	text-shadow: 0 0 1px #000000;
+	text-align: center;
+}
+
+h2 {
+	font-size:40px;
+	color:#DDDDDD;
+}
+
+h3 {
+	font-size:30px;
+	color:black;
+}
+
+body { 
+	background-color: var(--color_back);
+	margin: var(--margin_big) auto auto auto;
+	width: 85%;
+}
+
+#header {
+	background-color: var(--color_one);
+	height: 180px;
+	width:76%;
+	margin-top: -55px;
+	margin-left: 150px;
+	z-index: 2;
+	position:fixed;
+	border-right: solid 8px #333;
+	border-bottom: solid 8px #333;
+	border-radius: 2px;
+	padding-bottom: 0;
+}
+
+#logo {
+	width: 12.5%;
+	background-color: var(--color_two);
+	z-index: 3;
+	float: left;
+	position:fixed;
+	margin-top:-65px;
+	padding: 1px;
+	border: solid 8px #444;
+	border-radius: 2px;
+}
+
+#logo img {
+	width: 100%;
+}
+
+#logo.rotate:hover {
+	cursor:pointer;
+	animation-name: logoRotate;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+
+footer 
+{
+	padding: 2px 2px;
+	text-align: center;
+	background-color: var(--color_one);
+	max-height: 50px;
+	position: relative;
+	clear: both;
+}
+
+footer a {
+	background-color: #555;
+	padding:10px;
+	color: #222;
+	transition: background-color 0.2s ease;
+}
+footer a:hover {
+	background-color: #4d4d4d;
+	color: #111;
+}
+
+footer h5 {
+	color: #999;
+}
+
+#socialMedia {
+	width: 25%;
+	max-width: 260px;
+	background-color: var(--color_one);
+	position: relative;
+	z-index: 1;
+	bottom: 0;
+	margin-left: 83%;
+	padding: 10px;
+	border: solid 8px #333;
+	opacity: 0.4;
+	transition: opacity 0.2s ease;
+	transition-delay: 0.4s;
+	transition: transform 0.4s ease;
+	transform: rotate(0deg) scale(1);
+}
+
+
+#socialMedia:hover {
+	opacity: 1;
+	transition-delay: 0s;
+	transform: rotate(10deg) scale(1.2);
+}
+
+#socialLinks {
+	float: right;
+	margin-right: 15px;
+	margin-top: -30px;
+}
+
+#stylebutton {
+	margin-left: 10px; 
+	border-radius: 2px;
+	padding: 10px; 
+	background-color: #555;
+	border-color: #333;
+}
+
+#stylebutton:hover {
+	background-color: #666;
+	border-color: #444;
+	cursor: pointer;
+}
+
+#chosen {
+	background-color:#999;
+	color: var(--color_two);
+	font-size:18px;
+}
+
+#sideA {
+	position: fixed;
+	width: 60%;
+	max-height: 30px;
+	margin:auto;
+	margin-left: 27%;
+	margin-top: 45px;
+	z-index: 4;
+}
+
+nav {
+	width:90%;
+	margin: 0 var(--margin_small) var(--margin_small) 0;
+	padding: 5px 0 5px 0;
+}
+
+nav li {
+	background-color: var(--color_two);
+	padding: 10px 0 10px 0;
+	width: 15%;
+	margin: auto;
+	text-align: center;
+	float:left;
+	margin-right: 5px;
+	display:inline-block;
+}
+
+nav li:hover {
+	background-color: #888;
+	transition: color 0.2s ease;
+	color: #444;
+	font-size:18px;
+	animation-name: move;
+	animation-duration: 0.3s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease;
+}
+
+nav li:active {
+	background-color: var(--color_two);
+	color: #222;
+}
+
+.content {
+	background-color: var(--color_one);
+	text-align: center;
+	width: 100%;
+	padding-top:1px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	margin-bottom: var(--margin_small);
+	margin-top: 150px;
+	margin-left: 220px;
+	animation: fadein 1s;
+}
+
+#opdrachtIMG, object {
+	border: solid 8px #666;
+	border-radius: 2px;
+	padding: 5px;
+}
+
+#backButton, #forwardButton {
+	background-color: #555;
+	color:#222;
+	padding:10px;
+	font-size:24px;
+	transition: padding 0.3s ease; 
+	margin-top:-100px;
+}
+
+#backButton {
+	float:left;
+	margin-left:20px;
+}
+
+#forwardButton {
+	float:right;
+	margin-right:20px;
+}
+
+#backButton:hover, #forwardButton:hover {
+	padding:15px;
+	color:#111;
+	background-color: #4d4d4d;
+}
+
+.download {
+	background-color: #777;
+	padding: 15px 10px;
+	color: black;
+	transition: padding 0.3s ease;
+}
+
+.download:hover {
+	font-style: normal;
+	background-color: #666;
+	color: #000;
+	padding: 20px 20px;
+}
+
+.download:active {
+	font-weight: bold;
+	color: #999;
+	background-color: #555;
+	margin-top: 5px;
+}
+
+.download:active img{
+	filter:invert(60%);
+}
+
+@keyframes fadein {
+	from{opacity:0;}
+	to{opacity:1;}
+}
+
+@keyframes logoRotate {
+	0% {transform: scale(1.0)}
+	25% {transform: scale(1.05) rotate(2deg)}
+	50% {transform: scale(1.0)}
+	75% {transform: scale(1.05) rotate(-2deg)}
+}
+
+@keyframes move {
+	 from {padding: 10px 0 10px 0;}
+	 to {padding: 15px 5px 15px 5px; margin-left:-25px;}
+}
+
+@keyframes schoolMove {
+	from {padding-left:0px; padding-right:0px; margin-left:15px;}
+	to {padding-left:5px; padding-right:5px; margin-left:10px;}
+}
+
+@media screen and (max-width:1300px) /* Small scaled */
+{
+	body {
+		
+	}
+	
+	#logo {
+		width: 200px;
+		margin-top:-1%;
+	}
+}

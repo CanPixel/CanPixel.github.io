@@ -1,0 +1,266 @@
+/* Style Switch */
+.onoffswitch {
+    position: relative;
+	float: right;
+	margin-right: 10px;
+	margin-top: 6px;
+	width: 87px;
+    -webkit-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block; 
+	overflow: hidden; 
+	cursor: pointer;
+    border: 2px solid #E3E3E3; 
+	border-radius: 2px;
+}
+
+.onoffswitch-inner {
+    display: block; 
+	width: 200%; 
+	margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; 
+	float: left; 
+	width: 50%; 
+	height: 34px; 
+	padding: 0; 
+	line-height: 34px;
+    font-size: 12px; 
+	color: white;
+	font-weight: bold;
+    box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+    content: "Stijl 2";
+    padding-left: 3px;
+    background-color: #E0DDDD; 
+	color: #827A7A;
+}
+
+.onoffswitch-inner:after {
+    content: "Stijl 1";
+    padding-right: 5px;
+    background-color: #E0DDDD; 
+	color: #666666;
+    text-align: right;
+}
+
+.onoffswitch-switch {
+    display: block; 
+	width: 37px; 
+	margin: -1.5px;
+    background: #A1A1A1;
+    position: absolute; 
+	top: 0; 
+	bottom: 0;
+    right: 49px;
+    border: 2px solid #E3E3E3; 
+	border-radius: 2px;
+    transition: all 0.3s ease-in 0s; 
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+    background-color: #000000; 
+}
+
+ul {
+	list-style-type: none;
+}
+
+#logboek {
+	border:solid 1px black;
+	border-spacing: 3px;
+	background-color:#909090;
+}
+
+#logboek td:nth-child(odd) {
+	background-color:#EEEEEE;
+}
+
+th {
+	background-color:#DDDDDD;
+	padding:8px 28px;
+}
+
+td {
+	border:solid 1px #555555;
+	border-collapse:collapse;
+	background-color:#DDDDDD;
+}
+
+a {
+	text-decoration: none;
+	font-size:14px; 
+	color:#450101
+}
+
+a:hover{
+	color:#B50003;
+	font-style: oblique;
+}
+
+a:hover > li {
+	font-style:normal;
+}
+
+ul a {
+	color:black;
+	font-size:16px; 
+}
+
+.social img:hover{
+	filter: opacity(0.55);
+}
+
+:root {
+	--color_back: #DDDDDD;
+	--color_one: #999999;
+	--color_two: #AAAAAA;
+	--margin_small: 15px;
+	--margin_big: 50px;
+	font-family: Verdana;
+}
+
+h1 {
+	font-size: 55px;
+	text-shadow: 0 0 1px #000000;
+	text-align: center;
+}
+
+h2 {
+	font-size:40px;
+	color:#DDDDDD;
+}
+
+h3 {
+	font-size:30px;
+	color:black;
+}
+
+body { 
+	background-color: var(--color_back);
+	margin: var(--margin_big) auto auto auto;
+	width: 85%;
+}
+
+#header {
+	background-color: var(--color_one);
+	height: 100px;
+	padding: 50px;
+	z-index: 0;
+	border-bottom: solid 1px #CCCCCC;
+	border-right: solid 1px #CCCCCC;
+
+}
+
+#logo {
+	width: 17.5%;
+	background-color: var(--color_two);
+	z-index: 2;
+	float: left;
+	margin-top:-5%;
+	padding: 10px 20px;
+}
+
+#logo img {
+	width: 100%;
+}
+
+footer 
+{
+	padding: 2px 2px;
+	text-align: center;
+	background-color: var(--color_one);
+	max-height: 50px;
+	position: relative;
+	clear: both;
+}
+
+#socialMedia {
+	width: 100%;
+	background-color: var(--color_one);
+	position: relative;
+	z-index: 1;
+}
+
+nav {
+	width:100%;
+	background-color: var(--color_one);
+	margin: 0 var(--margin_small) var(--margin_small) 0;
+	padding: 5px 0 5px 0;
+	z-index: 1;
+}
+
+nav li {
+	padding: 10px 0 10px 0;
+	width: 100%;
+	margin: auto auto 10px -20px;
+	text-align: center;
+}
+
+nav li:hover {
+	background-color: #424242;
+	color: var(--color_two);
+	font-size:18px;
+	animation-name: move;
+	animation-duration: 0.3s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease;
+}
+
+nav li:active {
+	background-color: var(--color_two);
+	color: white;
+}
+
+nav li:visited {
+	background-color: #FFFFFF;
+	color: red;
+}
+
+.content {
+	background-color: var(--color_one);
+	text-align: center;
+	width: 100%;
+	padding-top:1px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+	margin-bottom: var(--margin_small);
+}
+
+@keyframes move {
+	 from {padding: 10px 0 10px 0;}
+	 to {padding: 15px 5px 15px 5px; margin-left:-25px;}
+}
+
+
+@media screen and (max-width:1300px) /* Small scaled */
+{
+	body {
+		background-color: white;
+	}
+	
+	#logo {
+		width: 200px;
+		margin-top:-1%;
+	}
+}
